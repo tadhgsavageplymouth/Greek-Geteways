@@ -1,51 +1,64 @@
 // Firebase configuration
 var firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyB08BUmiV1m4_EcQZkor9eAlucMLuj8my8",
+    authDomain: "greek-getaways-auth.firebaseapp.com",
+    projectId: "greek-getaways-auth",
+    storageBucket: "greek-getaways-auth.appspot.com",
+    messagingSenderId: "935837785556",
+    appId: "1:935837785556:web:3a08c535c69035f08f8a41",
+    measurementId: "G-H54H81Q4R7"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Login
-document.getElementById('login-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var email = document.getElementById('login-email').value;
-    var password = document.getElementById('login-password').value;
+document.addEventListener("DOMContentLoaded", function() {
+    // Attach event listener for login form submission
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("Login form submitted");
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            alert('Login successful!');
-        })
-        .catch((error) => {
-            alert('Error: ' + error.message);
+            var email = document.getElementById('login-email').value;
+            var password = document.getElementById('login-password').value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    console.log('Login successful! User: ', userCredential.user);
+                    alert('Login successful!');
+                    window.location.href = 'index.html'; // Redirect to index.html after login
+                })
+                .catch((error) => {
+                    console.error('Login Error:', error);
+                    alert('Error: ' + error.message);
+                });
         });
-});
+    } else {
+        console.error("Login form with ID 'login-form' not found.");
+    }
 
-// Sign Up
-document.getElementById('signup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var email = document.getElementById('signup-email').value;
-    var password = document.getElementById('signup-password').value;
+    // Attach event listener for sign-up form submission
+    const signUpForm = document.getElementById('signup-form');
+    if (signUpForm) {
+        signUpForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("Sign-up form submitted");
 
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            alert('Sign Up successful!');
-        })
-        .catch((error) => {
-            alert('Error: ' + error.message);
+            var email = document.getElementById('signup-email').value;
+            var password = document.getElementById('signup-password').value;
+
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    console.log('Sign-up successful! User: ', userCredential.user);
+                    alert('Sign Up successful!');
+                    window.location.href = 'index.html'; // Redirect to index.html after sign-up
+                })
+                .catch((error) => {
+                    console.error('Sign-up Error:', error);
+                    alert('Error: ' + error.message);
+                });
         });
-});
-
-// Initialize the flatpickr calendar on each input element with the class 'calendar'
-flatpickr(".calendar", {
-    minDate: "today", // Prevent past dates from being selected
-    dateFormat: "Y-m-d", // Date format: Year-Month-Day
-    mode: "range", // Allow users to select a date range
-    onChange: function(selectedDates, dateStr, instance) {
-        console.log("Selected dates: ", dateStr); // Can be used for booking functionality
+    } else {
+        console.error("Sign-up form with ID 'signup-form' not found.");
     }
 });

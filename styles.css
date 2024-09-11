@@ -197,3 +197,35 @@ footer {
 .auth-container button:hover {
     background-color: #005a92;
 }
+
+nav ul li a.login-btn {
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.login-btn:hover {
+    background-color: #FF5A49;
+}
+
+.auth-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.auth-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0074B7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-btn:hover {
+    background-color: #005a92;
+}
