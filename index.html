@@ -26,9 +26,11 @@
         <div class="homes-container">
             <!-- Villa 1 -->
             <div class="home">
-                <img src="https://images.unsplash.com/photo-1562586841-c26d63662b65?q=80&w=2648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="First Apartment">
+                <a href="villa1.html">
+                    <img src="https://images.unsplash.com/photo-1562586841-c26d63662b65?q=80&w=2648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="First Apartment">
+                </a>
                 <div class="home-details">
-                    <h2>Luxury Villa in Paris</h2>
+                    <h2><a href="villa1.html" class="no-style-link">Luxury Villa in Paris</a></h2> <!-- Link style hidden -->
                     <p>Stunning ocean view villa in Santorini. Relax and enjoy the Aegean Sea.</p>
                     <span class="price">€500/night</span>
                     <input type="text" class="calendar" placeholder="Select dates">
@@ -84,13 +86,12 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Initialize Flatpickr on elements with the class "calendar"
             flatpickr(".calendar", {
-                minDate: "today", // Prevent past dates from being selected
-                dateFormat: "Y-m-d", // Format: Year-Month-Day
-                mode: "range", // Allow users to select a date range
+                minDate: "today", 
+                dateFormat: "Y-m-d", 
+                mode: "range",
                 onChange: function (selectedDates, dateStr, instance) {
-                    console.log("Selected dates: ", dateStr); // Log selected dates for debugging
+                    console.log("Selected dates: ", dateStr);
                 }
             });
         });
