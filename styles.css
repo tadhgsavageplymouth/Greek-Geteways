@@ -146,6 +146,27 @@ footer {
     margin-top: 50px;
 }
 
+/* Message Styles */
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+.message.success {
+    background-color: #77DD77; /* Green background for success */
+    color: white;
+    border: 1px solid #77DD77;
+}
+
+.message.error {
+    background-color: #FF6961; /* Red background for error */
+    color: white;
+    border: 1px solid #FF6961;
+}
+
 /* Auth Section */
 .auth-section {
     padding: 50px;
