@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Luxury Homes - Paris Apartments</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Homes - Paris Apartments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
 <body>
     <header>
         <div class="logo">Parisian Apartments</div>
@@ -80,7 +80,20 @@
         <p>&copy; 2024 Parisian Apartments. All rights reserved.</p>
     </footer>
 
+    <!-- Load the Flatpickr Library -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="script.js"></script> <!-- Your Custom Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Flatpickr on elements with the class "calendar"
+            flatpickr(".calendar", {
+                minDate: "today", // Prevent past dates from being selected
+                dateFormat: "Y-m-d", // Format: Year-Month-Day
+                mode: "range", // Allow users to select a date range
+                onChange: function (selectedDates, dateStr, instance) {
+                    console.log("Selected dates: ", dateStr); // Log selected dates for debugging
+                }
+            });
+        });
+    </script>
 </body>
 </html>
