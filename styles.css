@@ -172,3 +172,131 @@ footer {
     background-color: #f5f6ee;
     color: #4b4c47;
 }
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #ede7d7;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    color: #4b4c47;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #4b4c47;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #e5c4bd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #4b4c47;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f5f6ee;
+    font-size: 16px;
+    color: #4b4c47;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #4b4c47;
+    color: #f5f6ee;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #bb97a3;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #ede7d7;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    color: #4b4c47;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #4b4c47;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-text {
+    width: 60%;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #4b4c47;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #4b4c47;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+    color: #4b4c47;
+}
+
+.about-image {
+    width: 35%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
