@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Apartment in Paris - Parisian Apartments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Parisian Apartments</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="villa-section">
+        <h1>Large Apartment in Paris</h1>
+        <div class="villa-details">
+            <img src="https://images.unsplash.com/photo-1589814976633-5c1afc469328?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Large Apartment in Paris">
+            <div class="villa-description">
+                <h2>About the Apartment</h2>
+                <p>This exclusive large apartment is located in the heart of Paris, offering luxurious accommodation with spacious rooms and modern amenities. Perfect for families or groups, it is within walking distance of major attractions like the Louvre and the Seine River.</p>
+
+                <ul>
+                    <li>4 spacious bedrooms with en-suite bathrooms</li>
+                    <li>Modern kitchen with top-tier appliances</li>
+                    <li>Private balcony with city views</li>
+                    <li>High-speed Wi-Fi and smart TV</li>
+                    <li>24/7 concierge service</li>
+                </ul>
+
+                <span class="price">€600/night</span>
+
+                <h3>Select Your Dates</h3>
+                <input type="text" class="calendar" placeholder="Select dates">
+                <button class="clear-dates-btn">Clear Dates</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parisian Apartments. All rights reserved.</p>
+    </footer>
+
+    <!-- Load the Flatpickr Library -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const calendarInstance = flatpickr(".calendar", {
+                minDate: "today",
+                dateFormat: "Y-m-d",
+                mode: "range",
+                onChange: function (selectedDates, dateStr, instance) {
+                    console.log("Selected dates: ", dateStr);
+                }
+            });
+
+            const clearDatesBtn = document.querySelector('.clear-dates-btn');
+            clearDatesBtn.addEventListener('click', function () {
+                calendarInstance.clear();
+            });
+        });
+    </script>
+</body>
+</html>
