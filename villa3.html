@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Studio in Paris - Parisian Apartments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
@@ -24,25 +29,73 @@
     <section class="villa-section">
         <h1>Luxury Studio in Paris</h1>
         <div class="villa-details">
-            <img src="https://images.unsplash.com/photo-1568038238728-9fd832befa94?q=80&w=2618&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Studio in Paris">
+            <!-- Swiper Container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1568038238728-9fd832befa94?auto=format&q=80&fit=crop&w=800" alt="Luxury Studio in Paris">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&q=80&fit=crop&w=800" alt="Studio Interior">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&q=80&fit=crop&w=800" alt="Studio View">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
             <div class="villa-description">
                 <h2>About the Studio</h2>
                 <p>This luxurious studio apartment offers breathtaking views of Paris from its elevated position. Ideal for couples or solo travelers, the studio combines comfort, style, and convenience, located near key attractions like Montmartre and the Sacré-Cœur Basilica.</p>
-
-                <ul>
-                    <li>Open-plan living and bedroom area</li>
-                    <li>Fully equipped kitchenette</li>
-                    <li>Private balcony with city views</li>
-                    <li>High-speed Wi-Fi and streaming services</li>
-                    <li>24/7 concierge service</li>
-                </ul>
 
                 <span class="price">€700/night</span>
 
                 <h3>Select Your Dates</h3>
                 <input type="text" class="calendar" placeholder="Select dates">
                 <button class="clear-dates-btn">Clear Dates</button>
+
+                <h3>Amenities</h3>
+                <ul>
+                    <li>Open-plan living and bedroom area</li>
+                    <li>Fully equipped kitchenette</li>
+                    <li>Private balcony with city views</li>
+                    <li>High-speed Wi-Fi and streaming services</li>
+                    <li>Luxury bedding and toiletries</li>
+                </ul>
+
+                <h3>Services</h3>
+                <ul>
+                    <li>Weekly housekeeping</li>
+                    <li>In-room massage upon request</li>
+                    <li>Personal shopper service</li>
+                    <li>24/7 concierge service</li>
+                </ul>
+
+                <h3>Rates</h3>
+                <p>Rates are subject to change based on demand and season. Please reach out for the most current pricing and special offers.</p>
+
+                <h3>Essential Information</h3>
+                <ul>
+                    <li>Check-in: 2 PM</li>
+                    <li>Check-out: 12 PM</li>
+                    <li>No smoking allowed</li>
+                    <li>Pet-friendly (small pets)</li>
+                    <li>Quiet hours after 10 PM</li>
+                </ul>
             </div>
+        </div>
+
+        <!-- Location Section -->
+        <h2>Location</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.621682320727!2d2.342327615674725!3d48.852968079287264!2m3!1f0!2f0!3f0!3m2!
+                1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66df89d7f621b%3A0xa6b55536bd273f0!2sSacré-Cœur!5e0!3m2!1sen!2sfr!4v1632317890123!5m2!1sen!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
     </section>
 
@@ -50,17 +103,27 @@
         <p>&copy; 2024 Parisian Apartments. All rights reserved.</p>
     </footer>
 
-    <!-- Load the Flatpickr Library -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Initialize Swiper and Flatpickr -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Swiper
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            // Initialize Flatpickr
             const calendarInstance = flatpickr(".calendar", {
                 minDate: "today",
                 dateFormat: "Y-m-d",
                 mode: "range",
-                onChange: function (selectedDates, dateStr, instance) {
-                    console.log("Selected dates: ", dateStr);
-                }
             });
 
             const clearDatesBtn = document.querySelector('.clear-dates-btn');

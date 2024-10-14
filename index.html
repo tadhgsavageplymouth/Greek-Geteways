@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Luxury Homes - Parisian Apartments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Homes - Paris Apartments</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
@@ -16,7 +21,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="login-btn">Login / Sign Up</a></li> <!-- Single button for both login and sign-up -->
+                <li><a href="login.html" class="login-btn">Login / Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -24,53 +29,105 @@
     <section class="home-section">
         <h1>Luxury Homes for Your Perfect Getaway</h1>
         <div class="homes-container">
-            <!-- Villa 1 -->
+            <!-- Home 1 -->
             <div class="home">
-                <a href="villa1.html">
-                    <img src="https://images.unsplash.com/photo-1562586841-c26d63662b65?q=80&w=2648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="First Apartment">
-                </a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1562586841-c26d63662b65?auto=format&q=80&fit=crop&w=800" alt="Luxury Villa in Paris">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1506310038541-b4aa456c4a2d?auto=format&q=80&fit=crop&w=800" alt="Villa Interior">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&q=80&fit=crop&w=800" alt="Villa Bedroom">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
                 <div class="home-details">
-                    <h2><a href="villa1.html" class="no-style-link">Luxury Villa in Paris</a></h2> <!-- Link style hidden -->
-                    <p>Stunning ocean view villa in Santorini. Relax and enjoy the Aegean Sea.</p>
+                    <h2><a href="villa1.html" class="no-style-link">Luxury Villa in Paris</a></h2>
+                    <p>Stunning villa with panoramic views of Paris.</p>
                     <span class="price">€500/night</span>
                     <input type="text" class="calendar" placeholder="Select dates">
                 </div>
             </div>
 
-            <!-- Villa 2 -->
+            <!-- Home 2 -->
             <div class="home">
-                <a href="villa2.html">
-                    <img src="https://images.unsplash.com/photo-1589814976633-5c1afc469328?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Second Apartment">
-                </a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1589814976633-5c1afc469328?auto=format&q=80&fit=crop&w=800" alt="Large Apartment in Paris">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1505691723518-41b7e42fbb31?auto=format&q=80&fit=crop&w=800" alt="Apartment Interior">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1593032466514-49b5ef3e1e48?auto=format&q=80&fit=crop&w=800" alt="Apartment Bedroom">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
                 <div class="home-details">
                     <h2><a href="villa2.html" class="no-style-link">Large Apartment in Paris</a></h2>
-                    <p>Exclusive villa located right on the beach in Mykonos.</p>
+                    <p>Exclusive apartment located in the heart of Paris.</p>
                     <span class="price">€600/night</span>
                     <input type="text" class="calendar" placeholder="Select dates">
                 </div>
             </div>
 
-            <!-- Villa 3 -->
+            <!-- Home 3 -->
             <div class="home">
-                <a href="villa3.html">
-                    <img src="https://images.unsplash.com/photo-1568038238728-9fd832befa94?q=80&w=2618&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Third Apartment">
-                </a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1568038238728-9fd832befa94?auto=format&q=80&fit=crop&w=800" alt="Luxury Studio in Paris">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&q=80&fit=crop&w=800" alt="Studio Interior">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&q=80&fit=crop&w=800" alt="Studio Bedroom">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
                 <div class="home-details">
                     <h2><a href="villa3.html" class="no-style-link">Luxury Studio in Paris</a></h2>
-                    <p>A secluded luxury villa on the cliffs of Crete with breathtaking views.</p>
+                    <p>Elegant studio with breathtaking city views.</p>
                     <span class="price">€700/night</span>
                     <input type="text" class="calendar" placeholder="Select dates">
                 </div>
             </div>
 
-            <!-- Villa 4 -->
+            <!-- Home 4 -->
             <div class="home">
-                <a href="villa4.html">
-                    <img src="https://images.unsplash.com/photo-1635198445165-38ed3338dc58?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fourth Apartment">
-                </a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1635198445165-38ed3338dc58?auto=format&q=80&fit=crop&w=800" alt="Boutique Apartment in Paris">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1560448204-e2aaf92da6a5?auto=format&q=80&fit=crop&w=800" alt="Boutique Apartment Interior">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1559599189-2c8d9f9a68f1?auto=format&q=80&fit=crop&w=800" alt="Boutique Apartment Bedroom">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
                 <div class="home-details">
-                    <h2><a href="villa4.html" class="no-style-link">Boutique Apartment - Paris</a></h2>
-                    <p>Spacious luxury mansion located directly on the seafront in Rhodes.</p>
+                    <h2><a href="villa4.html" class="no-style-link">Boutique Apartment in Paris</a></h2>
+                    <p>Spacious boutique apartment near the Seine River.</p>
                     <span class="price">€800/night</span>
                     <input type="text" class="calendar" placeholder="Select dates">
                 </div>
@@ -82,13 +139,26 @@
         <p>&copy; 2024 Parisian Apartments. All rights reserved.</p>
     </footer>
 
-    <!-- Load the Flatpickr Library -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Initialize Swiper and Flatpickr -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Swiper
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            // Initialize Flatpickr
             flatpickr(".calendar", {
-                minDate: "today", 
-                dateFormat: "Y-m-d", 
+                minDate: "today",
+                dateFormat: "Y-m-d",
                 mode: "range",
                 onChange: function (selectedDates, dateStr, instance) {
                     console.log("Selected dates: ", dateStr);

@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Large Apartment in Paris - Parisian Apartments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
@@ -24,25 +29,73 @@
     <section class="villa-section">
         <h1>Large Apartment in Paris</h1>
         <div class="villa-details">
-            <img src="https://images.unsplash.com/photo-1589814976633-5c1afc469328?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Large Apartment in Paris">
+            <!-- Swiper Container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1589814976633-5c1afc469328?auto=format&q=80&fit=crop&w=800" alt="Large Apartment in Paris">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161e94d96?auto=format&q=80&fit=crop&w=800" alt="Apartment Living Room">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1600585153783-1e0a8d76f30b?auto=format&q=80&fit=crop&w=800" alt="Apartment Bedroom">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
             <div class="villa-description">
                 <h2>About the Apartment</h2>
                 <p>This exclusive large apartment is located in the heart of Paris, offering luxurious accommodation with spacious rooms and modern amenities. Perfect for families or groups, it is within walking distance of major attractions like the Louvre and the Seine River.</p>
-
-                <ul>
-                    <li>4 spacious bedrooms with en-suite bathrooms</li>
-                    <li>Modern kitchen with top-tier appliances</li>
-                    <li>Private balcony with city views</li>
-                    <li>High-speed Wi-Fi and smart TV</li>
-                    <li>24/7 concierge service</li>
-                </ul>
 
                 <span class="price">€600/night</span>
 
                 <h3>Select Your Dates</h3>
                 <input type="text" class="calendar" placeholder="Select dates">
                 <button class="clear-dates-btn">Clear Dates</button>
+
+                <h3>Amenities</h3>
+                <ul>
+                    <li>4 spacious bedrooms with en-suite bathrooms</li>
+                    <li>Modern kitchen with top-tier appliances</li>
+                    <li>Private balcony with city views</li>
+                    <li>High-speed Wi-Fi and smart TV</li>
+                    <li>Luxury linens and towels</li>
+                </ul>
+
+                <h3>Services</h3>
+                <ul>
+                    <li>Daily housekeeping</li>
+                    <li>Grocery delivery service</li>
+                    <li>Private chauffeur upon request</li>
+                    <li>24/7 concierge service</li>
+                </ul>
+
+                <h3>Rates</h3>
+                <p>Rates may vary based on the season and duration of stay. Please contact us for an exact quote tailored to your needs.</p>
+
+                <h3>Essential Information</h3>
+                <ul>
+                    <li>Check-in: 3 PM</li>
+                    <li>Check-out: 11 AM</li>
+                    <li>No parties or events</li>
+                    <li>Pets allowed upon approval</li>
+                    <li>Smoking permitted on balcony only</li>
+                </ul>
             </div>
+        </div>
+
+        <!-- Location Section -->
+        <h2>Location</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.897509950612!2d2.334596315674985!3d48.86061107928753!2m3!1f0!2f0!3f0!3m2!
+                1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d8779196a1%3A0xb46f5f1d2e11ebed!2sLouvre%20Museum!5e0!3m2!1sen!2sfr!4v1632314567890!5m2!1sen!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
     </section>
 
@@ -50,17 +103,27 @@
         <p>&copy; 2024 Parisian Apartments. All rights reserved.</p>
     </footer>
 
-    <!-- Load the Flatpickr Library -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Initialize Swiper and Flatpickr -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Swiper
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            // Initialize Flatpickr
             const calendarInstance = flatpickr(".calendar", {
                 minDate: "today",
                 dateFormat: "Y-m-d",
                 mode: "range",
-                onChange: function (selectedDates, dateStr, instance) {
-                    console.log("Selected dates: ", dateStr);
-                }
             });
 
             const clearDatesBtn = document.querySelector('.clear-dates-btn');

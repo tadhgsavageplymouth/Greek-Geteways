@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Villa in Paris - Parisian Apartments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
@@ -24,25 +29,73 @@
     <section class="villa-section">
         <h1>Luxury Villa in Paris</h1>
         <div class="villa-details">
-            <img src="https://images.unsplash.com/photo-1562586841-c26d63662b65?q=80&w=2648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Villa in Paris">
+            <!-- Swiper Container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1562586841-c26d63662b65?auto=format&q=80&fit=crop&w=800" alt="Luxury Villa in Paris">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&q=80&fit=crop&w=800" alt="Villa Interior">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&q=80&fit=crop&w=800" alt="Villa Bedroom">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
             <div class="villa-description">
                 <h2>About the Villa</h2>
                 <p>This stunning luxury villa offers a panoramic view of the Paris skyline. Designed for ultimate relaxation, it blends modern comfort with Parisian charm, creating the perfect atmosphere for a peaceful getaway. Located in a serene neighborhood, the villa is only a short distance from key landmarks such as the Eiffel Tower and the Champs-Élysées.</p>
-
-                <ul>
-                    <li>3 spacious bedrooms with en-suite bathrooms</li>
-                    <li>Fully equipped kitchen and dining area</li>
-                    <li>Private terrace with garden views</li>
-                    <li>High-speed Wi-Fi and entertainment system</li>
-                    <li>24/7 concierge service</li>
-                </ul>
 
                 <span class="price">€500/night</span>
 
                 <h3>Select Your Dates</h3>
                 <input type="text" class="calendar" placeholder="Select dates">
                 <button class="clear-dates-btn">Clear Dates</button>
+
+                <h3>Amenities</h3>
+                <ul>
+                    <li>Heated swimming pool</li>
+                    <li>Private gym</li>
+                    <li>Home cinema</li>
+                    <li>High-speed Wi-Fi</li>
+                    <li>Luxury toiletries</li>
+                </ul>
+
+                <h3>Services</h3>
+                <ul>
+                    <li>Daily housekeeping</li>
+                    <li>Personal chef upon request</li>
+                    <li>Airport transfer</li>
+                    <li>Concierge service</li>
+                </ul>
+
+                <h3>Rates</h3>
+                <p>The rates vary depending on the season and length of stay. Please contact us for a detailed quote.</p>
+
+                <h3>Essential Information</h3>
+                <ul>
+                    <li>Check-in: 3 PM</li>
+                    <li>Check-out: 11 AM</li>
+                    <li>No smoking inside the villa</li>
+                    <li>Pets are not allowed</li>
+                    <li>Security deposit required</li>
+                </ul>
             </div>
+        </div>
+
+        <!-- Location Section -->
+        <h2>Location</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9998150583673!2d2.2922926156750024!3d48.85837007928786!2m3!1f0!2f0!3f0!3m2!
+                1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdeb0cf7e77%3A0x4b62a665fa78f227!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1632311234567!5m2!1sen!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
     </section>
 
@@ -50,17 +103,27 @@
         <p>&copy; 2024 Parisian Apartments. All rights reserved.</p>
     </footer>
 
-    <!-- Load the Flatpickr Library -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Initialize Swiper and Flatpickr -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Swiper
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            // Initialize Flatpickr
             const calendarInstance = flatpickr(".calendar", {
                 minDate: "today",
                 dateFormat: "Y-m-d",
                 mode: "range",
-                onChange: function (selectedDates, dateStr, instance) {
-                    console.log("Selected dates: ", dateStr);
-                }
             });
 
             const clearDatesBtn = document.querySelector('.clear-dates-btn');

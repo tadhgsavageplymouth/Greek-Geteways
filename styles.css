@@ -1,3 +1,5 @@
+/* styles.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +8,14 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f5f6ee; /* Background color */
-    color: #4b4c47; /* Text color */
+    background-color: #F8F5F2; /* Off-white background */
+    color: #4B4C47; /* Text color */
 }
 
 /* Header Styles */
 header {
-    background-color: #bb97a3; /* Header background */
-    color: #f5f6ee; /* Text color */
+    background-color: #2E4053; /* Navy blue */
+    color: #F8F5F2; /* Off-white */
     padding: 20px;
     text-align: center;
 }
@@ -26,35 +28,36 @@ header {
 nav ul {
     display: flex;
     list-style: none;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
-/* Modify nav ul li a to add hover effect */
+/* Navigation Links */
 nav ul li a {
-    color: #f5f6ee; /* Link color */
+    color: #F8F5F2;
     text-decoration: none;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #f5f6ee; /* Background turns light grey on hover */
-    color: #4b4c47; /* Text turns dark grey on hover */
+    background-color: #F8F5F2;
+    color: #2E4053;
 }
-
 
 /* Button Styles */
 nav ul li a.login-btn,
 .auth-btn,
 .auth-container button {
     padding: 10px 20px;
-    background-color: #4b4c47; /* Button background */
-    color: #f5f6ee; /* Button text */
+    background-color: #2E4053;
+    color: #F8F5F2;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -63,19 +66,19 @@ nav ul li a.login-btn,
 nav ul li a.login-btn:hover,
 .auth-btn:hover,
 .auth-container button:hover {
-    background-color: #bb97a3; /* Hover color */
+    background-color: #4B4C47;
 }
 
 /* Home Section Styles */
 .home-section {
     padding: 50px;
     text-align: center;
-    background-color: #ede7d7; /* Section background */
+    background-color: #FFFFFF;
 }
 
 .home-section h1 {
     font-size: 36px;
-    color: #4b4c47; /* Section header color */
+    color: #2E4053;
     margin-bottom: 30px;
 }
 
@@ -86,7 +89,7 @@ nav ul li a.login-btn:hover,
 }
 
 .home {
-    background-color: #e5c4bd; /* Villa card background */
+    background-color: #F0ECE2;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -96,13 +99,12 @@ nav ul li a.login-btn:hover,
 }
 
 .home:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .home img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto;
 }
 
 .home-details {
@@ -113,18 +115,18 @@ nav ul li a.login-btn:hover,
 .home-details h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #4b4c47;
+    color: #2E4053;
 }
 
 .home-details p {
     margin-bottom: 10px;
     font-size: 16px;
-    color: #4b4c47;
+    color: #4B4C47;
 }
 
 .price {
     font-size: 18px;
-    color: #bb97a3; /* Price color */
+    color: #2E4053;
     font-weight: bold;
 }
 
@@ -134,15 +136,27 @@ nav ul li a.login-btn:hover,
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    background-color: #f5f6ee;
+    background-color: #F8F5F2;
+}
+
+/* Swiper Styles */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #4b4c47; /* Footer background */
-    color: #f5f6ee; /* Footer text */
+    background-color: #2E4053;
+    color: #F8F5F2;
     margin-top: 50px;
 }
 
@@ -152,17 +166,17 @@ footer {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 .message.success {
-    background-color: #77DD77; /* Green background for success */
+    background-color: #77DD77;
     color: white;
     border: 1px solid #77DD77;
 }
 
 .message.error {
-    background-color: #FF6961; /* Red background for error */
+    background-color: #FF6961;
     color: white;
     border: 1px solid #FF6961;
 }
@@ -170,7 +184,7 @@ footer {
 /* Auth Section */
 .auth-section {
     padding: 50px;
-    background-color: #f5f6ee; /* Background consistent with the site */
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
 }
@@ -184,7 +198,7 @@ footer {
 }
 
 .auth-box {
-    background-color: #e5c4bd; /* Matching color for the form background */
+    background-color: #F0ECE2;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -195,7 +209,7 @@ footer {
 .auth-box h2 {
     font-size: 24px;
     margin-bottom: 30px;
-    color: #4b4c47;
+    color: #2E4053;
     text-align: center;
 }
 
@@ -208,17 +222,16 @@ footer {
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    background-color: #f5f6ee;
+    background-color: #F8F5F2;
     font-size: 16px;
-    color: #4b4c47;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #4B4C47;
 }
 
 .auth-btn {
     width: 100%;
     padding: 15px;
-    background-color: #4b4c47;
-    color: #f5f6ee;
+    background-color: #2E4053;
+    color: #F8F5F2;
     border-radius: 5px;
     border: none;
     font-size: 16px;
@@ -228,10 +241,19 @@ footer {
 }
 
 .auth-btn:hover {
-    background-color: #bb97a3;
+    background-color: #4B4C47;
 }
 
 @media (max-width: 768px) {
+    .homes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home {
+        width: 90%;
+    }
+
     .auth-container {
         flex-direction: column;
         align-items: center;
@@ -242,205 +264,66 @@ footer {
     }
 }
 
-/* Contact Section Styles */
-.contact-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #ede7d7;
-}
-
-.contact-section h1 {
-    font-size: 36px;
-    color: #4b4c47;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    font-size: 18px;
-    color: #4b4c47;
-    margin-bottom: 40px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #e5c4bd;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #4b4c47;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #f5f6ee;
-    font-size: 16px;
-    color: #4b4c47;
-}
-
-.submit-btn {
-    padding: 10px 20px;
-    background-color: #4b4c47;
-    color: #f5f6ee;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.submit-btn:hover {
-    background-color: #bb97a3;
-}
-
-/* About Section Styles */
-.about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #ede7d7;
-}
-
-.about-section h1 {
-    font-size: 36px;
-    color: #4b4c47;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 18px;
-    color: #4b4c47;
-    margin-bottom: 40px;
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.about-text {
-    width: 60%;
-    text-align: left;
-}
-
-.about-text h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #4b4c47;
-}
-
-.about-text p {
-    font-size: 16px;
-    color: #4b4c47;
-    margin-bottom: 20px;
-}
-
-.about-text ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.about-text ul li {
-    margin-bottom: 10px;
-    color: #4b4c47;
-}
-
-.about-image {
-    width: 35%;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 /* Villa Page Styles */
 .villa-section {
     padding: 50px;
     text-align: center;
-    background-color: #ede7d7;
+    background-color: #FFFFFF;
 }
 
 .villa-details {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
-.villa-details img {
-    max-width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.villa-details .swiper-container {
+    width: 60%;
+    height: 500px;
+}
+
+.villa-details .swiper-slide img {
+    height: 500px;
 }
 
 .villa-description {
-    width: 40%;
+    width: 35%;
     text-align: left;
 }
 
 .villa-description h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #4b4c47;
+    color: #2E4053;
 }
 
-.villa-description p {
+.villa-description p,
+.villa-description ul {
     font-size: 16px;
-    color: #4b4c47;
+    color: #4B4C47;
     margin-bottom: 20px;
 }
 
 .villa-description ul {
     list-style: disc;
     padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.villa-description ul li {
-    margin-bottom: 10px;
-    color: #4b4c47;
 }
 
 .villa-description .price {
     font-size: 22px;
     font-weight: bold;
-    color: #bb97a3;
+    color: #2E4053;
     margin-bottom: 20px;
     display: block;
-}
-
-.calendar {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #f5f6ee;
 }
 
 .clear-dates-btn {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #4b4c47;
-    color: #f5f6ee;
+    background-color: #2E4053;
+    color: #F8F5F2;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -448,16 +331,40 @@ footer {
 }
 
 .clear-dates-btn:hover {
-    background-color: #bb97a3;
+    background-color: #4B4C47;
 }
 
-/* Hide link underline and maintain formatting for villa 1 */
-.no-style-link {
-    text-decoration: none;
-    color: inherit; /* Maintain the current font color */
-    font-weight: inherit; /* Maintain the same font weight */
+/* Map Container */
+.map-container {
+    margin-top: 50px;
 }
 
-.no-style-link:hover {
-    color: #bb97a3; /* Optional: add a hover color */
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* New Sections in Villa Page */
+.villa-section h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    color: #2E4053;
+}
+
+@media (max-width: 768px) {
+    .villa-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .villa-details .swiper-container,
+    .villa-description {
+        width: 100%;
+    }
+
+    .villa-details .swiper-slide img {
+        height: auto;
+    }
 }

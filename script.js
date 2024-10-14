@@ -1,6 +1,8 @@
+// script.js
+
 // Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyB08BUmiV1m4_EcQZkor9eAlucMLuj8my8",
+    apiKey: "YOUR_API_KEY",
     authDomain: "greek-getaways-auth.firebaseapp.com",
     projectId: "greek-getaways-auth",
     storageBucket: "greek-getaways-auth.appspot.com",
