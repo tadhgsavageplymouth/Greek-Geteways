@@ -1,0 +1,11 @@
+Add in link to airbnb
+
+add in real locaiton
+
+soert out how photos flick through ot be more neat
+
+make about page more pretty
+
+sort out contact page and attach to a real email account
+
+somehow airbnb api for active dates to link to calendar 
